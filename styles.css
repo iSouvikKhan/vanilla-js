@@ -4,7 +4,8 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     height: 100%;
     overflow: hidden;
 }
@@ -18,7 +19,8 @@ html, body {
 
 .carousel-items {
     display: flex;
-    width: 200%; /* Since there are 2 images */
+    width: 200%;
+    /* Since there are 2 images */
     height: 100%;
     animation: slide 10s infinite;
 }
@@ -36,11 +38,25 @@ html, body {
 }
 
 @keyframes slide {
-    0% { transform: translateX(0); }
-    25% { transform: translateX(0); }
-    50% { transform: translateX(-50%); }
-    75% { transform: translateX(-50%); }
-    100% { transform: translateX(0); }
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    75% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
 
@@ -58,11 +74,11 @@ html, body {
     top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 40%; /* Adjusted width */
-    height: 30%; /* Adjusted height */
+    width: 40%;
+    height: auto;
     text-align: center;
     background: rgba(240, 236, 236, 0.678);
-    padding: 40px; /* Adjusted padding */
+    padding: 40px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -103,4 +119,51 @@ html, body {
 .dropzone a:hover {
     text-decoration: underline;
     cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+.file-list {
+    margin-top: 20px;
+}
+
+.file-entry {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.thumbnail {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.description-input {
+    flex-grow: 1;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.save-button,
+.delete-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+.save-button {
+    color: green;
+}
+
+.delete-button {
+    color: red;
 }
