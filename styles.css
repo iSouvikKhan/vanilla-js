@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.carousel-items {
+    display: flex;
+    width: 200%; /* Since there are 2 images */
+    height: 100%;
+    animation: slide 10s infinite;
+}
+
+.carousel-item {
+    width: 50%;
+    height: 100%;
+    flex: 0 0 50%;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(0); }
+    50% { transform: translateX(-50%); }
+    75% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+}
+
+
+
+
+
+
+
+
+
+
+
+.app-container {
+    position: fixed;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%; /* Adjusted width */
+    height: 30%; /* Adjusted height */
+    text-align: center;
+    background: rgba(240, 236, 236, 0.678);
+    padding: 40px; /* Adjusted padding */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.upload-box h1 {
+    color: #f97306;
+    margin-bottom: 20px;
+    margin-top: -20px;
+}
+
+.dropzone {
+    border: 2px dashed #f97306;
+    padding: 20px;
+    border-radius: 5px;
+    background: #fff6f0;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    height: 150px;
+}
+
+.dropzone span {
+    color: #f97306;
+    font-size: 16px;
+}
+
+.dropzone a {
+    color: #f97306;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.dropzone a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
